@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Códigos & IA | Crie Sites Sem Programar</title>
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+<style>
+:root{
+  --bg:#04040a;
+  --panel:#0c1026;
+  --blue:#4f7cff;
+  --purple:#9b5cff;
+  --gold:#d4af37;
+  --text:#ffffff;
+  --muted:#aab0d6;
+  --glow-blue:0 0 40px rgba(79,124,255,.35);
+  --glow-gold:0 0 40px rgba(212,175,55,.35);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Inter,system-ui,Arial,sans-serif;
+}
+
+body{
+  background:
+    radial-gradient(circle at top,#0a0f3a,#04040a 70%);
+  color:var(--text);
+}
+
+section{
+  max-width:1200px;
+  margin:auto;
+  padding:90px 20px;
+}
+
+.hero{
+  text-align:center;
+}
+
+.logo{
+  width:180px;
+  margin-bottom:36px;
+  filter:drop-shadow(var(--glow-blue));
+}
+
+.hero h1{
+  font-size:2.8rem;
+  font-weight:800;
+  background:linear-gradient(90deg,var(--blue),var(--purple),var(--gold));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  margin-top:20px;
+  font-size:1.15rem;
+  color:var(--muted);
+  max-width:720px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.hero strong{
+  color:#fff;
+}
+
+.cta-main{
+  display:inline-block;
+  margin-top:36px;
+  padding:18px 46px;
+  border-radius:60px;
+  font-weight:700;
+  font-size:1.05rem;
+  color:#000;
+  background:linear-gradient(90deg,var(--gold),#ffeaa0);
+  box-shadow:var(--glow-gold);
+  text-decoration:none;
+  transition:.2s;
+}
+
+.cta-main:hover{
+  transform:scale(1.06);
+}
+
+.mockup{
+  margin-top:64px;
+  padding:32px;
+  border-radius:22px;
+  background:linear-gradient(180deg,#121755,#080b22);
+  box-shadow:0 0 80px rgba(0,0,0,.6);
+}
+
+.mockup h2{
+  font-size:1.6rem;
+  margin-bottom:18px;
+}
+
+.mockup p{
+  color:var(--muted);
+  margin-bottom:24px;
+}
+
+.mockup-box{
+  height:220px;
+  border-radius:14px;
+  background:
+    linear-gradient(135deg,#1b2060,#0c1026);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#8fa3ff;
+  font-size:.95rem;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.features{
+  display:grid;
+  gap:28px;
+  margin-top:60px;
+}
+
+@media(min-width:768px){
+  .features{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+.feature{
+  background:rgba(255,255,255,.03);
+  padding:28px;
+  border-radius:18px;
+}
+
+.feature h3{
+  color:var(--gold);
+  margin-bottom:10px;
+}
+
+.feature p{
+  color:var(--muted);
+}
+
+.price-section{
+  text-align:center;
+  margin-top:90px;
+}
+
+.old-price{
+  text-decoration:line-through;
+  color:#777;
+  font-size:1.1rem;
+}
+
+.new-price{
+  font-size:2.6rem;
+  font-weight:800;
+  color:var(--gold);
+  margin:12px 0;
+  text-shadow:var(--glow-gold);
+}
+
+.final{
+  text-align:center;
+  padding-bottom:110px;
+}
+
+.final h2{
+  font-size:2rem;
+  margin-bottom:16px;
+}
+
+.final p{
+  color:var(--muted);
+  max-width:600px;
+  margin:auto;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  section {
+    padding: 70px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .mockup {
+    margin-top: 50px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+  .logo {
+    width: 100px;
+    margin-bottom: 26px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta-main {
+    padding: 16px 34px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .mockup {
+    padding: 22px;
+  }
+
+  .mockup h2 {
+    font-size: 1.35rem;
+  }
+
+  .features {
+    margin-top: 50px;
+  }
+
+  .feature {
+    padding: 22px;
+  }
+
+  .price-section {
+    margin-top: 70px;
+  }
+
+  .new-price {
+    font-size: 2.1rem;
+  }
+
+  .final h2 {
+    font-size: 1.6rem;
+  }
+
+  .final p {
+    font-size: .95rem;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  section {
+    padding: 60px 16px;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero p {
+    font-size: .95rem;
+  }
+
+  .cta-main {
+    padding: 15px 26px;
+  }
+
+  .new-price {
+    font-size: 1.9rem;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="img/icon.png" class="logo" alt="Códigos & IA">
+
+  <h1>Crie Sites <br>Sem Saber Programar</h1>
+
+  <p>
+    Use <strong>Inteligência Artificial</strong> para criar páginas profissionais,
+    modernas e prontas para vender — mesmo começando do zero.
+  </p>
+
+  <a href="#checkout" class="cta-main">Quero Aprender a Criar Sites</a>
+
+  <!-- MOCKUP -->
+  <div class="mockup">
+    <h2>Crie sites profissionais com IA</h2>
+    <p>
+      Landing pages modernas, rápidas e persuasivas —  
+      do tipo que empresas e clientes compram.
+    </p>
+
+    <!-- FEATURES -->
+  <div class="features">
+    <div class="feature">
+      <h3>Sem Código</h3>
+      <p>
+        Você não aprende programação.  
+        Aprende a mandar a IA trabalhar.
+      </p>
+    </div>
+
+    <div class="feature">
+      <h3>Com Estratégia</h3>
+      <p>
+        Não é sobre ferramentas.  
+        É sobre saber pedir do jeito certo.
+      </p>
+    </div>
+
+    <div class="feature">
+      <h3>Com Vantagem</h3>
+      <p>
+        Enquanto outros estudam código,
+        você entrega resultados.
+      </p>
+    </div>
+  </div>
+
+  <!-- PREÇO -->
+<section class="price-section" id="checkout">
+  <p class="old-price">De R$ 199,99</p>
+  <div class="new-price">Por R$ 99,99</div>
+  <a href="https://www.instagram.com/_andcode/" class="cta-main">Acessar o Curso Agora</a>
+</section>
+
+<!-- FINAL -->
+<section class="final">
+  <h2>O mercado mudou!</h2>
+  <p>
+    As pessoas dizem que a IA vai dominar a Criação de Sites, mas não é a IA que vai dominar.
+    E sim, alguém que vai dominar a IA. <br> Neste Curso Você Aprende a Colocar a IA para Trabalhar pra Você! <br> Você Digita e ela Cria, O Seu Trabalho Vai Ser Colocar no Ar e Eu Também te Ensino Neste Curso!
+  </p>
+</section>
+
+
+</section>
+
+
+
+    
+
+</section>
+
+
+
+
+
+</body>
+</html>
